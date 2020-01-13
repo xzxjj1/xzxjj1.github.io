@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/01/12/DEMO-TodoList/</loc>
+    
+    <lastmod>2020-01-12T18:52:33.392Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/12/02/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91/</loc>
     
     <lastmod>2019-12-02T15:25:37.614Z</lastmod>

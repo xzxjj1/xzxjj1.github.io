@@ -62,7 +62,7 @@
 <meta property="og:site_name" content="Xing Jingjie&#39;s Blog">
 <meta property="og:description" content="项目链接https://github.com/xzxjj1/DEMO-TodoList 开发环境macOS node 12.13.1 技术栈vue2 + vue-router + vuex + webpack + es6 + scss + elementUI 具体实现：项目主要有四个功能页面：Login.vue、add.vue、List.vue、Edit.vue，通过本地缓存将数据通过vuex实现">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-12T18:52:33.392Z">
+<meta property="og:updated_time" content="2020-01-13T06:04:54.735Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DEMO-TodoList">
 <meta name="twitter:description" content="项目链接https://github.com/xzxjj1/DEMO-TodoList 开发环境macOS node 12.13.1 技术栈vue2 + vue-router + vuex + webpack + es6 + scss + elementUI 具体实现：项目主要有四个功能页面：Login.vue、add.vue、List.vue、Edit.vue，通过本地缓存将数据通过vuex实现">
@@ -277,7 +277,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-13 02:52:33" itemprop="dateModified" datetime="2020-01-13T02:52:33+08:00">2020-01-13</time>
+                <time title="修改时间：2020-01-13 14:04:54" itemprop="dateModified" datetime="2020-01-13T14:04:54+08:00">2020-01-13</time>
               </span>
             
           
@@ -323,6 +323,9 @@
 <p>通过vuex store.state 页面传值</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'@/store'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">"edit"</span>,</span><br><span class="line">  store,</span><br><span class="line">  data () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      id: <span class="keyword">this</span>.$route.query.Id,</span><br><span class="line">      title: <span class="string">''</span>,</span><br><span class="line">      content: <span class="string">''</span>,</span><br><span class="line">      datetime: <span class="string">''</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">	methods: &#123;</span><br><span class="line">    jump()&#123;</span><br><span class="line">      <span class="keyword">this</span>.$router.push(<span class="string">'/home/list'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    edit()&#123;</span><br><span class="line">      <span class="comment">//与list.vue中的edit()方法中的query绑定相对应</span></span><br><span class="line">      <span class="keyword">var</span> id=<span class="keyword">this</span>.$route.query.Id;</span><br><span class="line">      <span class="comment">//利用vuex中更改lists对象值</span></span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">this</span>.title!=<span class="string">''</span>)</span><br><span class="line">        store.state.lists[id].title=<span class="keyword">this</span>.title;</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">this</span>.content!=<span class="string">''</span>)</span><br><span class="line">        store.state.lists[id].content=<span class="keyword">this</span>.content;</span><br><span class="line">      store.state.lists[id].datetime=<span class="keyword">this</span>.datetime;</span><br><span class="line">      <span class="keyword">this</span>.title=<span class="string">''</span>,</span><br><span class="line">      <span class="keyword">this</span>.content=<span class="string">''</span>,</span><br><span class="line">      <span class="keyword">this</span>.$router.push(<span class="string">'/home/list'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 
+<p>大概实现就是这样，这是两个月前写的东西，这两个月经历了 搞废了一台mbp、许多杂事、期末死亡预习…</p>
+<p>刚补了博客，复习了一下之前学的东西，感觉这些长时间不用就会忘记。还是水平太菜了，接下来要持续修炼才行。</p>
+<p>还有希望不要再挂科了🙏    补考补修很麻烦的好吧！</p>
 
     </div>
 
@@ -350,8 +353,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/12/02/关于最近/" rel="next" title="关于最近">
-                  <i class="fa fa-chevron-left"></i> 关于最近
+                <a href="/2019/09/25/原型设计工具-墨刀/" rel="next" title="原型设计工具--墨刀">
+                  <i class="fa fa-chevron-left"></i> 原型设计工具--墨刀
                 </a>
               
             </div>
@@ -428,7 +431,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -459,7 +462,7 @@
         
           
         
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
